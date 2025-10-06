@@ -21,13 +21,14 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
-            <img
-              src="/assets/KKRGLogo.png"
-              alt="KKR Group Logo"
-              className="h-10 w-auto"
-            />
-            <span className="text-xl font-heading font-bold text-gold hidden sm:block">KKR Group</span>
+          <Link to="/" className="flex items-center">
+            <div className="bg-white rounded-full p-2 shadow-md hover:shadow-lg transition-smooth">
+              <img
+                src="/assets/KKRGLogo.png"
+                alt="KKR Group Logo"
+                className="h-10 w-auto"
+              />
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
