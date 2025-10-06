@@ -54,9 +54,48 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Mission Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-royal-blue mb-6">Our Mission</h2>
+              <p className="text-lg text-charcoal leading-relaxed mb-6">
+                To catalyze sustainable economic transformation across Africa by creating strategic investment platforms, empowering communities, and fostering inclusive growth through innovative partnerships and targeted development initiatives.
+              </p>
+              <div className="flex gap-4">
+                <Link to="/about" className="bg-royal-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-royal-blue/90 transition-smooth">
+                  Learn More
+                </Link>
+                <Link to="/contact" className="border-2 border-royal-blue text-royal-blue px-6 py-3 rounded-lg font-semibold hover:bg-royal-blue hover:text-white transition-smooth">
+                  Get Involved
+                </Link>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-6">
+              {[
+                { label: 'Focus Areas', value: '5', icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' },
+                { label: 'Strategic Impact', value: '100%', icon: 'M13 7h8m0 0v8m0-8l-8 8-4-4-6 6' },
+                { label: 'Community First', value: '∞', icon: 'M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z' },
+                { label: 'Sustainable Growth', value: '⟳', icon: 'M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15' },
+              ].map((stat, index) => (
+                <div key={index} className="bg-gradient-to-br from-royal-blue to-royal-blue/80 p-6 rounded-xl text-center text-white shadow-lg hover:shadow-2xl transition-smooth">
+                  <svg className="w-10 h-10 mx-auto mb-3 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={stat.icon} />
+                  </svg>
+                  <div className="text-3xl font-bold mb-2 text-gold">{stat.value}</div>
+                  <div className="text-sm font-medium">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Highlights Section */}
       <section className="py-16 bg-neutral-gray">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-royal-blue text-center mb-10">Explore Our Work</h2>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {[
               { name: 'About', path: '/about', icon: 'M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z' },
@@ -68,21 +107,23 @@ const Home = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className="flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-smooth"
+                className="flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-smooth group"
               >
-                <svg
-                  className="w-12 h-12 text-royal-blue mb-3"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d={item.icon}
-                  />
-                </svg>
+                <div className="bg-royal-blue p-3 rounded-lg mb-3 group-hover:bg-gold transition-smooth">
+                  <svg
+                    className="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d={item.icon}
+                    />
+                  </svg>
+                </div>
                 <span className="text-sm font-semibold text-charcoal text-center">
                   {item.name}
                 </span>
