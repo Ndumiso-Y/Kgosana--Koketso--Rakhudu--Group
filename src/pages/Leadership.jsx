@@ -20,11 +20,11 @@ const Leadership = () => {
           <div className="bg-white rounded-lg shadow-xl overflow-hidden">
             <div className="grid md:grid-cols-5 gap-0">
               {/* Image Section */}
-              <div className="md:col-span-2 bg-royal-blue">
+              <div className="md:col-span-2 bg-neutral-gray flex items-center justify-center">
                 <img
                   src="/assets/leadership-dr-koketso.jpg"
                   alt="Dr. Koketso Rakhudu - Founder & Executive Chairperson"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
 
