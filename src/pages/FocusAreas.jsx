@@ -97,19 +97,23 @@ const FocusAreas = () => {
           {/* Enterprise Development */}
           <div className="mb-8">
             <h2 className="text-3xl font-bold text-royal-blue mb-6 text-center">
-              🟧 Enterprise Development
+              🟧 Enterprise Development + Urban Development
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
-              <img
-                src="/assets/focus-enterprise.jpg"
-                alt="Enterprise Development"
-                className="w-full h-64 object-cover rounded-lg shadow-lg"
-              />
-              <img
-                src="/assets/focus-urban.jpg"
-                alt="Urban Development"
-                className="w-full h-64 object-cover rounded-lg shadow-lg"
-              />
+              <div className="bg-neutral-gray rounded-lg shadow-lg overflow-hidden flex items-center justify-center h-64">
+                <img
+                  src="/assets/focus-enterprise.jpg"
+                  alt="Enterprise Development"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="bg-neutral-gray rounded-lg shadow-lg overflow-hidden flex items-center justify-center h-64">
+                <img
+                  src="/assets/focus-urban.jpg"
+                  alt="Urban Development"
+                  className="w-full h-full object-contain"
+                />
+              </div>
             </div>
           </div>
 
