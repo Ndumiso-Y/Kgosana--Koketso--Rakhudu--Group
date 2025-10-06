@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { getAssetPath } from '../utils/assetPath';
 
 const Home = () => {
   return (
@@ -23,7 +24,7 @@ const Home = () => {
           className="absolute inset-0 w-full h-full object-cover"
           style={{ transform: 'scale(1.05)' }}
         >
-          <source src="/assets/kkr-hero.mp4" type="video/mp4" />
+          <source src={getAssetPath('/assets/kkr-hero.mp4')} type="video/mp4" />
         </video>
 
         {/* Gradient Overlay */}

@@ -1,11 +1,12 @@
 import { Helmet } from 'react-helmet-async';
 import Carousel from '../components/Carousel';
+import { getAssetPath } from '../utils/assetPath';
 
 const About = () => {
   const bannerImages = [
-    '/assets/about-banner-1.jpg',
-    '/assets/about-banner-2.jpg',
-    '/assets/about-banner-3.jpg',
+    getAssetPath('/assets/about-banner-1.jpg'),
+    getAssetPath('/assets/about-banner-2.jpg'),
+    getAssetPath('/assets/about-banner-3.jpg'),
   ];
 
   return (

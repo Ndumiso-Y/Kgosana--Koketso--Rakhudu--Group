@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
+import { getAssetPath } from '../utils/assetPath';
 
 const Contact = () => {
   const [formData, setFormData] = useState({

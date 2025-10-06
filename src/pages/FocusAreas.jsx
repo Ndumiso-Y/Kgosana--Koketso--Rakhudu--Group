@@ -2,25 +2,26 @@ import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 import Carousel from '../components/Carousel';
 import { Link } from 'react-router-dom';
+import { getAssetPath } from '../utils/assetPath';
 
 const FocusAreas = () => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   const empowermentImages = [
-    '/assets/focus-empowerment-1.jpg',
-    '/assets/focus-empowerment-2.jpg',
+    getAssetPath('/assets/focus-empowerment-1.jpg'),
+    getAssetPath('/assets/focus-empowerment-2.jpg'),
   ];
 
   const agricultureImages = [
-    '/assets/focus-agriculture-1.jpg',
-    '/assets/focus-agriculture-2.jpg',
-    '/assets/focus-agriculture-3.jpg',
+    getAssetPath('/assets/focus-agriculture-1.jpg'),
+    getAssetPath('/assets/focus-agriculture-2.jpg'),
+    getAssetPath('/assets/focus-agriculture-3.jpg'),
   ];
 
   const skillsImages = [
-    '/assets/focus-skills-1.jpg',
-    '/assets/focus-skills-2.jpg',
-    '/assets/focus-skills-3.jpg',
+    getAssetPath('/assets/focus-skills-1.jpg'),
+    getAssetPath('/assets/focus-skills-2.jpg'),
+    getAssetPath('/assets/focus-skills-3.jpg'),
   ];
 
   const handleVideoPlay = () => {
@@ -102,14 +103,14 @@ const FocusAreas = () => {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-neutral-gray rounded-lg shadow-lg overflow-hidden flex items-center justify-center h-64">
                 <img
-                  src="/assets/focus-enterprise.jpg"
+                  src={getAssetPath('/assets/focus-enterprise.jpg')}
                   alt="Enterprise Development"
                   className="w-full h-full object-contain"
                 />
               </div>
               <div className="bg-neutral-gray rounded-lg shadow-lg overflow-hidden flex items-center justify-center h-64">
                 <img
-                  src="/assets/focus-urban.jpg"
+                  src={getAssetPath('/assets/focus-urban.jpg')}
                   alt="Urban Development"
                   className="w-full h-full object-contain"
                 />
@@ -123,13 +124,13 @@ const FocusAreas = () => {
               {/* Video Section - 60% */}
               <div className="md:col-span-3 relative">
                 <video
-                  poster="/assets/focus-enterprise-marabo-cover.jpg"
+                  poster={getAssetPath('/assets/focus-enterprise-marabo-cover.jpg')}
                   controls
                   className="w-full h-full object-cover"
                   onPlay={handleVideoPlay}
                   aria-label="Enterprise Empowerment: Marabo Essentials video"
                 >
-                  <source src="/assets/focus-enterprise-marabo.mp4" type="video/mp4" />
+                  <source src={getAssetPath('/assets/focus-enterprise-marabo.mp4')} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
                 {!isVideoPlaying && (

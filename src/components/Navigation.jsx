@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { getAssetPath } from '../utils/assetPath';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +25,7 @@ const Navigation = () => {
           <Link to="/" className="flex items-center gap-3 group">
             <div className="bg-white/95 rounded-lg px-3 py-2 shadow-md group-hover:shadow-lg group-hover:bg-white transition-smooth">
               <img
-                src="/assets/KKRGLogo.png"
+                src={getAssetPath('/assets/KKRGLogo.png')}
                 alt="KKR Group Logo"
                 className="h-8 w-auto"
               />

@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { getAssetPath } from '../utils/assetPath';
 
 const Leadership = () => {
   return (
@@ -22,7 +23,7 @@ const Leadership = () => {
               {/* Image Section */}
               <div className="md:col-span-2 bg-neutral-gray flex items-center justify-center">
                 <img
-                  src="/assets/leadership-dr-koketso.jpg"
+                  src={getAssetPath('/assets/leadership-dr-koketso.jpg')}
                   alt="Dr. Koketso Rakhudu - Founder & Executive Chairperson"
                   className="w-full h-full object-contain"
                 />
